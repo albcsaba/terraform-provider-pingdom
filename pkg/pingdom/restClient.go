@@ -31,9 +31,11 @@ func (client RestClient) Do(path, method string, requestBody io.Reader) (*Respon
 		return nil, err
 	}
 
-	request.Header.Add("accept", "application/json")
-	request.Header.Add("Content-Type", "application/json")
+	request.Header.Add("Accept", "*/*")
 	request.Header.Add("Authorization", "Bearer "+client.token)
+	if method == http.MethodPost || method == http.MethodPut || method == http.MethodDelete {
+		request.Header.Add("Content-Type", "application/json")
+	}
 
 	httpClient := &http.Client{}
 	response, err := httpClient.Do(request)
