@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "id": 5244511,
+      "created": 1558536347,
+      "name": "Site A",
+      "hostname": "site-a.testsite.com",
+      "resolution": 1,
+      "type": "https",
+      "ipv6": false,
+      "verify_certificate": true,
+      "tags": [
+        {
+          "name": "tag-one",
+          "type": "u",
+          "count": 1
+        },
+        {
+          "name": "tag-two",
+          "type": "u",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 5245765,
+      "created": 1558599388,
+      "name": "Site B",
+      "hostname": "site-b.testsite.com",
+      "resolution": 1,
+      "type": "https",
+      "ipv6": false,
+      "verify_certificate": true,
+      "tags": [
+        {
+          "name": "tag-two",
+          "type": "u",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "total": 2,
+    "limited": 2,
+    "filtered": 0
+  }
+}
