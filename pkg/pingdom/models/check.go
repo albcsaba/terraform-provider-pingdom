@@ -15,3 +15,7 @@ type Check struct {
 	} `json:"tags"`
 	Maintenances []string `json:"maintenanceids"`
 }
+
+type Checks struct {
+	Checks []Check `json:"checks,omitempty"`
+}
